@@ -160,7 +160,7 @@ class OperateInMeeting:
                                                  AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup").Click()
         time.sleep(2)
         auto.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=2,
-                                                                                             Name="结束会议").Click()
+                                                                                             Name="离开会议").Click()
 
     def terminate_call_in_full_mode(self):
         """结束会议"""

@@ -60,6 +60,7 @@ def __join_and_quit_meeting():
 
 
 def __invite_self():
+    reserve_meeting.go_to_meeting_page()
     reserve_meeting.reserve_meeting_from_panel()
     reserve_meeting.choose_now()
     reserve_meeting.choose_participants(login_user)
@@ -147,7 +148,7 @@ def test_change_auto_answer():
 def test_change_to_full_mode_meeting():
     app_setting.change_to_full_mode_meeting()
 
-    JoinAMeeting().join_now_meeting_from_reserved_item()
+    JoinAMeeting().join_now_meeting_from_top_menu()
     sleep(20)
     operate_meeting.terminate_call_in_full_mode()
     app_setting.change_to_full_mode_meeting()
@@ -158,6 +159,7 @@ def test_change_to_full_mode_meeting():
 @allure.parent_suite("应用设置")
 @allure.story("创建遍历带宽会议并入会")
 def test_remove_reserved_meeting():
+    reserve_meeting.go_to_meeting_page()
     sleep(5)
     reserve_meeting.clear_reserved_meeting()
 

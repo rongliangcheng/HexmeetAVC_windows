@@ -7,6 +7,7 @@ from time import sleep
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
 
+favorite_user="hexautotest5"
 
 class ReserveMeeting:
 
@@ -98,7 +99,7 @@ class ReserveMeeting:
     def choose_favorite_contact(self):
         log.info("Choose favorite contact")
         self.reserve_meeting_page.TextControl(searchDepth=7, Name="添加与会者(0)").Click()
-        self.reserve_meeting_page.TextControl(searchDepth=10, Name="hexautotest5").Click()
+        self.reserve_meeting_page.TextControl(searchDepth=10, Name=favorite_user).Click()
         self.reserve_meeting_page.TextControl(searchDepth=8, Name="确定").Click()
 
     def choose_participants(self, name):
@@ -107,7 +108,7 @@ class ReserveMeeting:
         self.participants_page.RadioButtonControl(searchDepth=8, Name="组织机构").Click()
         self.participants_page.EditControl(searchDepth=11, Name="请输入名称").SendKeys(name + "{ENTER}")
         sleep(1)
-        self.participants_page.TextControl(searchDepth=10, Name="hexautotest5 ").Click()
+        self.participants_page.TextControl(searchDepth=10, Name="中创软件测试中心").Click()
         sleep(1)
         self.participants_page.TextControl(searchDepth=6, Name="确定").Click()
 
