@@ -23,8 +23,8 @@ join_meeting = JoinAMeeting()
 app_setting = AppSetting()
 hexmeet_singleton = HexmeetWindowSingleton()
 
-bandwidth_list = ["384K", "512K", "768K", "1M", "1.5M", "3M", "4M", "2M"]
-
+# bandwidth_list = ["384K", "512K", "768K", "1M", "1.5M", "3M", "4M", "2M"]
+bandwidth_list = ["2M"]
 
 def setup_module():
     hexmeet_singleton.start_hexmeet()
