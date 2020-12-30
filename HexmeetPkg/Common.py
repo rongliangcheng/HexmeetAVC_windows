@@ -24,7 +24,7 @@ class CameraStatus(Enum):
     UMUTE = 2
 
 if __name__ == '__main__':
-    CommonClass().createEnvironmentFile("../test/allure-results/Environment.xml", "1.4.1.157")
+    CommonClass().createEnvironmentFile("allure-results/Environment.xml", "1.4.1.157")
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)

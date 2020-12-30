@@ -68,18 +68,6 @@ def __invite_self():
     operate_meeting.terminate_call()
 
 
-# def __join_and_share_whiteboard_then_exit():
-#     reserve_meeting.reserve_meeting_from_panel()
-#     reserve_meeting.choose_now()
-#     reserve_meeting.choose_participants(remote_user)
-#     reserve_meeting.reserve_confirm()
-#     sleep(5)
-#     reserve_meeting.mute_after_join()
-#     sleep(5)
-#     operate_meeting.share_content()
-#     sleep(3)
-#     operate_meeting.terminate_call()
-
 
 def __invite_others_and_join_the_meeting():
     reserve_meeting.reserve_meeting_from_panel()
@@ -102,55 +90,55 @@ def test_prepare_all():
     JoinAMeeting().join_now_meeting_from_reserved_item_and_hangup()
     reserve_meeting.return_from_reserve_meeting()
 
-#
-# @allure.feature("测试HEXMEET APP的设置界面")
-# @allure.parent_suite("应用设置")
-# @allure.story("改变带宽并入会")
-# @pytest.mark.parametrize('bandwidth', bandwidth_list)
-# def test_change_bandwidth(bandwidth):
-#     # for bandwidth in bandwidth_list:
-#     app_setting.chang_bandwidth(bandwidth)
-#     sleep(2)
-#     __join_and_quit_meeting()
-#     sleep(8)
-#
-#
-# @pytest.mark.flaky(rerun=1, reruns_delay=2)
-# @allure.feature("测试HEXMEET APP的设置界面")
-# @allure.parent_suite("应用设置")
-# @allure.story("结束带宽遍历会议")
-# def test_terminate_the_meeting():
-#     reserve_meeting.go_to_meeting_page()
-#     reserve_meeting.terminate_now_meeting()
-#
-#
-# @pytest.mark.flaky(rerun=1, reruns_delay=2)
-# @allure.feature("测试HEXMEET APP的设置界面")
-# @allure.parent_suite("应用设置")
-# @allure.story("改变语言")
-# def test_change_language():
-#     app_setting.chang_language("English")
-#     sleep(10)
-#     app_setting.chang_language("简体中文")
-#
-#
-# @pytest.mark.flaky(rerun=1, reruns_delay=2)
-# @allure.feature("测试HEXMEET APP的设置界面")
-# @allure.parent_suite("应用设置")
-# @allure.story("改变白板保持路径")
-# def test_change_screen_shot_path():
-#     app_setting.change_snapshot_path()
-#
-#
-# @pytest.mark.flaky(rerun=1, reruns_delay=2)
-# @allure.feature("测试HEXMEET APP的设置界面")
-# @allure.parent_suite("应用设置")
-# @allure.story("设置自动接听，并建会拉入")
-# def test_change_auto_answer():
-#     app_setting.change_auto_answer()
-#     __invite_self()
-#     app_setting.change_auto_answer()
-#
+
+@allure.feature("测试HEXMEET APP的设置界面")
+@allure.parent_suite("应用设置")
+@allure.story("改变带宽并入会")
+@pytest.mark.parametrize('bandwidth', bandwidth_list)
+def test_change_bandwidth(bandwidth):
+    # for bandwidth in bandwidth_list:
+    app_setting.chang_bandwidth(bandwidth)
+    sleep(2)
+    __join_and_quit_meeting()
+    sleep(8)
+
+
+@pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HEXMEET APP的设置界面")
+@allure.parent_suite("应用设置")
+@allure.story("结束带宽遍历会议")
+def test_terminate_the_meeting():
+    reserve_meeting.go_to_meeting_page()
+    reserve_meeting.terminate_now_meeting()
+
+
+@pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HEXMEET APP的设置界面")
+@allure.parent_suite("应用设置")
+@allure.story("改变语言")
+def test_change_language():
+    app_setting.chang_language("English")
+    sleep(10)
+    app_setting.chang_language("简体中文")
+
+
+@pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HEXMEET APP的设置界面")
+@allure.parent_suite("应用设置")
+@allure.story("改变白板保持路径")
+def test_change_screen_shot_path():
+    app_setting.change_snapshot_path()
+
+
+@pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HEXMEET APP的设置界面")
+@allure.parent_suite("应用设置")
+@allure.story("设置自动接听，并建会拉入")
+def test_change_auto_answer():
+    app_setting.change_auto_answer()
+    __invite_self()
+    app_setting.change_auto_answer()
+
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
 @allure.feature("测试HEXMEET APP的设置界面")
@@ -165,8 +153,13 @@ def test_change_to_full_mode_meeting():
     app_setting.change_to_full_mode_meeting()
 
 
-# def test_close_hjt():
-#     hjt_singleton.close_hjt()
+@pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HEXMEET APP的设置界面")
+@allure.parent_suite("应用设置")
+@allure.story("创建遍历带宽会议并入会")
+def test_remove_reserved_meeting():
+    sleep(5)
+    reserve_meeting.clear_reserved_meeting()
 
 
 if __name__ == '__main__':
