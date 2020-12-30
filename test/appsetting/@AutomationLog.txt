@@ -1,0 +1,25 @@
+2020-12-25 12:51:57.649 ReserveMeetingPageObject.py[110] choose_participants -> Find Control Timeout: {Name: 'hexautotest5 ', ControlType: TextControl}
+2020-12-25 12:52:24.906 ReserveMeetingPageObject.py[42] reserve_meeting_from_panel -> Find Control Timeout: {Name: '预约会议', ControlType: TextControl}
+2020-12-25 12:53:01.771 OperateInMeetingPageObject.py[26] show_media_statistics -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.m_pWgtTitleBar.m_pLeftWidget.m_pBtnNetworkQuality', ControlType: ButtonControl}
+2020-12-25 12:53:26.641 joinAMeetingPageObject.py[33] mute_mic -> Find Control Timeout: {AutomationId: 'CHomeDlg.CJoinConfDlg.verticalWidget_2.m_pChkBoxDisableMic', ControlType: CheckBoxControl}
+2020-12-25 12:54:56.933 ReserveMeetingPageObject.py[110] choose_participants -> Find Control Timeout: {Name: 'hexautotest5 ', ControlType: TextControl}
+2020-12-25 12:57:18.953 OperateInMeetingPageObject.py[21] click_meetingLabel -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.m_pWgtTitleBar.m_pLblConfNumber', ControlType: TextControl}
+2020-12-25 13:05:50.121 ReserveMeetingPageObject.py[42] reserve_meeting_from_panel -> Find Control Timeout: {Name: '预约会议', ControlType: TextControl}
+2020-12-25 13:17:58.641 HexmeetWindowsSingleton.py[34] close_hexmeet -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-12-25 14:31:32.794 ReserveMeetingPageObject.py[133] return_from_reserve_meeting -> Find Control Timeout: {Name: '会议基本信息:', ControlType: TextControl}
+2020-12-25 14:31:56.713 ReserveMeetingPageObject.py[31] go_to_meeting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-12-25 14:33:12.737 ReserveMeetingPageObject.py[133] return_from_reserve_meeting -> Find Control Timeout: {Name: '会议基本信息:', ControlType: TextControl}
+2020-12-25 14:33:36.733 ReserveMeetingPageObject.py[31] go_to_meeting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-12-25 14:33:48.033 AppSettingPageObject.py[17] go_to_setting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-12-25 14:33:59.019 AppSettingPageObject.py[17] go_to_setting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-12-25 14:34:10.248 AppSettingPageObject.py[17] go_to_setting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-12-25 14:34:21.529 AppSettingPageObject.py[17] go_to_setting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-12-25 14:34:32.735 AppSettingPageObject.py[17] go_to_setting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-12-25 14:34:44.026 AppSettingPageObject.py[17] go_to_setting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-12-25 14:56:47.408 HexmeetWindowsSingleton.py[34] close_hexmeet -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-12-25 15:05:19.329 joinAMeetingPageObject.py[111] join_now_meeting_from_reserved_item -> Find Control Timeout: {Name: '加入会议', ControlType: CustomControl}
+2020-12-25 15:08:50.783 OperateInMeetingPageObject.py[178] terminate_call_in_full_mode -> Find Control Timeout: {Name: '结束会议', ControlType: ButtonControl}
+2020-12-25 15:09:06.364 HexmeetWindowsSingleton.py[34] close_hexmeet -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-12-25 17:41:38.829 OperateInMeetingPageObject.py[140] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.AlertDlg.m_bottomWidget.m_button1', ControlType: ButtonControl}
+2020-12-25 17:42:03.330 ReserveMeetingPageObject.py[31] go_to_meeting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-12-25 17:44:30.593 OperateInMeetingPageObject.py[140] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.AlertDlg.m_bottomWidget.m_button1', ControlType: ButtonControl}

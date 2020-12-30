@@ -1,0 +1,28 @@
+2020-12-17 13:22:22.026 ContactPageObject.py[16] call_from_favorite -> Find Control Timeout: {Name: 'hexautotest5', ControlType: DataItemControl}
+2020-12-17 13:22:38.565 ContactPageObject.py[26] call_from_organization -> Find Control Timeout: {Name: ' 组织结构', ControlType: TabItemControl}
+2020-12-22 14:35:41.260 ContactPageObject.py[41] call_from_organization -> Find Control Timeout: {Name: '组织机构 ', ControlType: RadioButtonControl}
+2020-12-22 17:49:03.342 ContactPageObject.py[50] call_from_organization -> Find Control Timeout: {Name: '组织机构 ', ControlType: RadioButtonControl}
+2020-12-22 17:55:43.122 ContactPageObject.py[50] call_from_organization -> Find Control Timeout: {Name: '组织机构 ', ControlType: RadioButtonControl}
+2020-12-22 18:04:04.983 ContactPageObject.py[53] call_from_organization -> Find Control Timeout: {Name: 'hexautotest5', ControlType: TextControl}
+2020-12-22 18:26:16.607 OperateInMeetingPageObject.py[135] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-12-22 18:26:32.515 ContactPageObject.py[17] __contact_page_click -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-12-22 18:26:51.454 ContactPageObject.py[55] call_from_organization -> Find Control Timeout: {Name: '组织机构', ControlType: RadioButtonControl}
+2020-12-22 18:31:02.590 OperateInMeetingPageObject.py[135] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-12-22 18:45:22.608 OperateInMeetingPageObject.py[135] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-12-22 18:45:38.681 ContactPageObject.py[17] __contact_page_click -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-12-22 18:45:54.323 ContactPageObject.py[17] __contact_page_click -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-12-22 18:46:09.744 HexmeetWindowsSingleton.py[34] close_hexmeet -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-12-23 12:49:40.040 OperateInMeetingPageObject.py[135] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-12-23 12:49:55.968 ContactPageObject.py[17] __contact_page_click -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-12-23 12:50:12.004 ContactPageObject.py[17] __contact_page_click -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-12-23 12:50:27.637 HexmeetWindowsSingleton.py[34] close_hexmeet -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-12-23 12:59:37.055 OperateInMeetingPageObject.py[135] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-12-23 12:59:53.016 ContactPageObject.py[17] __contact_page_click -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-12-23 13:07:13.073 OperateInMeetingPageObject.py[135] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-12-23 13:09:24.603 ContactPageObject.py[55] call_from_organization -> Find Control Timeout: {Name: '组织机构', ControlType: RadioButtonControl}
+2020-12-23 13:09:42.511 ContactPageObject.py[55] call_from_organization -> Find Control Timeout: {Name: '组织机构', ControlType: RadioButtonControl}
+2020-12-23 13:09:58.840 ContactPageObject.py[34] call_from_favorite -> Find Control Timeout: {Name: 'hexautotest5', ControlType: TextControl}
+2020-12-23 13:10:15.488 ContactPageObject.py[34] call_from_favorite -> Find Control Timeout: {Name: 'hexautotest5', ControlType: TextControl}
+2020-12-23 13:10:31.843 ContactPageObject.py[34] call_from_favorite -> Find Control Timeout: {Name: 'hexautotest5', ControlType: TextControl}
+2020-12-23 13:25:08.747 ContactPageObject.py[56] call_from_organization -> Find Control Timeout: {Name: '组织机构', ControlType: RadioButtonControl}
+2020-12-23 13:39:20.433 ContactPageObject.py[56] call_from_organization -> Find Control Timeout: {Name: '组织机构', ControlType: RadioButtonControl}

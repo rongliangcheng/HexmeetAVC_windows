@@ -1,0 +1,1 @@
+2020-12-17 16:49:52.564 LoginPageObject.py[27] fill_in_password -> Find Control Timeout: {AutomationId: 'CLoginDlg.m_pStackedWgtContent.CLoginInfoForm.verticalWidget.m_pEditPasswd', ControlType: EditControl}
