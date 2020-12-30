@@ -31,6 +31,7 @@ call_matrix = [
 @allure.feature("测试HEXMEET APP的设置预约会议操作")
 def setup_module():
     hjt_singleton.start_hexmeet()
+    sleep(5)
 
 
 def teardown_module():
@@ -194,6 +195,8 @@ def test_create_now_password_and_join():
 @allure.story("创建即时会议")
 def test_create_now_meeting():
     reserve_meeting = ReserveMeeting()
+    reserve_meeting.clear_reserved_meeting()
+    sleep(2)
     reserve_meeting.reserve_meeting_from_panel()
     sleep(1)
     reserve_meeting.choose_now()

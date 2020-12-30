@@ -104,13 +104,13 @@ def test_change_bandwidth(bandwidth):
     sleep(8)
 
 
-@pytest.mark.flaky(rerun=1, reruns_delay=2)
-@allure.feature("测试HEXMEET APP的设置界面")
-@allure.parent_suite("应用设置")
-@allure.story("结束带宽遍历会议")
-def test_terminate_the_meeting():
-    reserve_meeting.go_to_meeting_page()
-    reserve_meeting.terminate_now_meeting()
+# @pytest.mark.flaky(rerun=1, reruns_delay=2)
+# @allure.feature("测试HEXMEET APP的设置界面")
+# @allure.parent_suite("应用设置")
+# @allure.story("结束带宽遍历会议")
+# def test_terminate_the_meeting():
+#     reserve_meeting.go_to_meeting_page()
+#     reserve_meeting.terminate_now_meeting()
 
 
 if __name__ == '__main__':
