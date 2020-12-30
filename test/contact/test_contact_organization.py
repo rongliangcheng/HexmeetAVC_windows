@@ -4,6 +4,7 @@ from time import sleep
 from HexmeetPkg.HexmeetWindowsSingleton import HexmeetWindowSingleton
 from HexmeetPkg.ContactPageObject import Contact
 from HexmeetPkg.Common import CallType
+from HexmeetPkg.ReserveMeetingPageObject import ReserveMeeting
 
 hjt_singleton = HexmeetWindowSingleton()
 contact = Contact()
@@ -12,6 +13,8 @@ contact_user = "hexautotest5"
 
 def setup_module():
     hjt_singleton.start_hexmeet()
+    sleep(5)
+    ReserveMeeting().clear_reserved_meeting()
 
 
 def teardown_module():

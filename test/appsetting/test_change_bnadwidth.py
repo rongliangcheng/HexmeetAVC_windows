@@ -24,14 +24,10 @@ app_setting = AppSetting()
 hexmeet_singleton = HexmeetWindowSingleton()
 
 bandwidth_list = ["384K", "512K", "768K", "1M", "1.5M", "3M", "4M", "2M"]
-
-
 # bandwidth_list = ["2M"]
 
 def setup_module():
     hexmeet_singleton.start_hexmeet()
-    sleep(5)
-    reserve_meeting.clear_reserved_meeting()
 
 
 def teardown_module():
@@ -54,6 +50,15 @@ def __count_screen_files():
     return len(file_list)
 
 
+def __join_and_quit_meeting():
+    sleep(5)
+    join_meeting.join_now_meeting_from_top_menu()
+    sleep(10)
+    operate_meeting.show_media_statistics()
+    sleep(10)
+    operate_meeting.hangup_call()
+
+
 def __invite_self():
     reserve_meeting.go_to_meeting_page()
     reserve_meeting.reserve_meeting_from_panel()
@@ -64,55 +69,48 @@ def __invite_self():
     operate_meeting.terminate_call()
 
 
-@pytest.mark.flaky(rerun=1, reruns_delay=2)
-@allure.feature("测试HEXMEET APP的设置界面")
-@allure.parent_suite("应用设置")
-@allure.story("改变语言")
-def test_change_language():
-    app_setting.chang_language("English")
-    sleep(10)
-    app_setting.chang_language("简体中文")
 
+def __invite_others_and_join_the_meeting():
+    reserve_meeting.reserve_meeting_from_panel()
+    reserve_meeting.choose_now()
+    reserve_meeting.choose_participants(remote_user)
+    reserve_meeting.reserve_confirm()
+    sleep(3)
 
-@pytest.mark.flaky(rerun=1, reruns_delay=2)
-@allure.feature("测试HEXMEET APP的设置界面")
-@allure.parent_suite("应用设置")
-@allure.story("改变白板保持路径")
-def test_change_screen_shot_path():
-    app_setting.change_snapshot_path()
-
-
-@pytest.mark.flaky(rerun=1, reruns_delay=2)
-@allure.feature("测试HEXMEET APP的设置界面")
-@allure.parent_suite("应用设置")
-@allure.story("设置自动接听，并建会拉入")
-def test_change_auto_answer():
-    app_setting.change_auto_answer()
-    __invite_self()
-    app_setting.change_auto_answer()
-
-
-@pytest.mark.flaky(rerun=1, reruns_delay=2)
-@allure.feature("测试HEXMEET APP的设置界面")
-@allure.parent_suite("应用设置")
-@allure.story("设置入会后全屏模式")
-def test_change_to_full_mode_meeting():
-    app_setting.change_to_full_mode_meeting()
-
-    JoinAMeeting().join_now_meeting_from_top_menu()
-    sleep(20)
-    operate_meeting.terminate_call_in_full_mode()
-    app_setting.change_to_full_mode_meeting()
 
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
 @allure.feature("测试HEXMEET APP的设置界面")
 @allure.parent_suite("应用设置")
 @allure.story("创建遍历带宽会议并入会")
-def test_remove_reserved_meeting():
-    reserve_meeting.go_to_meeting_page()
+def test_prepare_all():
     sleep(5)
     reserve_meeting.clear_reserved_meeting()
+    sleep(5)
+    __invite_others_and_join_the_meeting()
+    JoinAMeeting().join_now_meeting_from_reserved_item_and_hangup()
+    reserve_meeting.return_from_reserve_meeting()
+
+
+@allure.feature("测试HEXMEET APP的设置界面")
+@allure.parent_suite("应用设置")
+@allure.story("改变带宽并入会")
+@pytest.mark.parametrize('bandwidth', bandwidth_list)
+def test_change_bandwidth(bandwidth):
+    # for bandwidth in bandwidth_list:
+    app_setting.chang_bandwidth(bandwidth)
+    sleep(2)
+    __join_and_quit_meeting()
+    sleep(8)
+
+
+@pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HEXMEET APP的设置界面")
+@allure.parent_suite("应用设置")
+@allure.story("结束带宽遍历会议")
+def test_terminate_the_meeting():
+    reserve_meeting.go_to_meeting_page()
+    reserve_meeting.terminate_now_meeting()
 
 
 if __name__ == '__main__':
