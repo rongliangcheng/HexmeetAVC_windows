@@ -136,7 +136,7 @@ class OperateInMeeting:
         self.click_meetingLabel()
         auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutBackgroundDlg").WindowControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg").ButtonControl(searchDepth=1,
                                                  AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup").Click()
-        time.sleep(2)
+        time.sleep(4)
         auto.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=2, Name="离开会议").Click()
 
 
