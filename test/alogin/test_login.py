@@ -57,16 +57,16 @@ def test_login_with_wrong_server_address():
     user_login.login_fail_commit()
 
 
-# @pytest.mark.flaky(rerun=1, rerun_delay=2)
-# @allure.parent_suite("登录")
-# @allure.feature("测试HEXMEET APP的登录界面的操作")
-# @allure.story("尝试5遍被锁5分钟")
-# def test_login_with_5_times_wrong_password():
-#     for i in range(6):
-#         __user_login("172.25.0.9", "hexautotest6", "12346")
-#         sleep(1)
-#         user_login.login_fail_commit()
-#         sleep(10)
+@pytest.mark.flaky(rerun=1, rerun_delay=2)
+@allure.parent_suite("登录")
+@allure.feature("测试HEXMEET APP的登录界面的操作")
+@allure.story("尝试5遍被锁5分钟")
+def test_login_with_5_times_wrong_password():
+    for i in range(6):
+        __user_login("172.25.0.9", "hexautotest6", "12346")
+        sleep(1)
+        user_login.login_fail_commit()
+        sleep(10)
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
@@ -74,13 +74,8 @@ def test_login_with_wrong_server_address():
 @allure.feature("测试HEXMEET APP的登录界面的操作")
 @allure.story("正常登录成功")
 def test_login_with_normal():
-    # sleep(300)
+    sleep(300)
     __user_login("172.25.0.9", "hexautotest6", "123456")
-
-
-#
-# def test_close_hjt():
-#     hjt_singleton.close_hjt()
 
 
 if __name__ == '__main__':
