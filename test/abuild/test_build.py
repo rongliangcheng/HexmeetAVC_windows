@@ -1,6 +1,5 @@
-import subprocess
+# coding=utf-8
 from time import sleep
-
 import pytest
 import allure
 import sys
@@ -24,9 +23,9 @@ def teardown_module():
     hjt_singleton.close_hexmeet()
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
-@allure.feature("²âÊÔHEXMEET APPµÄÉèÖÃ½çÃæ")
-@allure.parent_suite("Ó¦ÓÃÉèÖÃ")
-@allure.story("´´½¨±éÀú´ø¿í»áÒé²¢Èë»á")
+@allure.feature("æµ‹è¯•HEXMEET APPçš„è®¾ç½®ç•Œé¢")
+@allure.parent_suite("åº”ç”¨è®¾ç½®")
+@allure.story("åˆ›å»ºéå†å¸¦å®½ä¼šè®®å¹¶å…¥ä¼š")
 def test_install_build():
     appVersion = AppVersion()
     buildVersion = BuildVersion()
