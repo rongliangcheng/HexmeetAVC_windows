@@ -3,7 +3,7 @@ import logging
 
 class CommonClass:
     def createEnvironmentFile(self, file, string):
-        content1 = "<environment>\n   <parameter>\n       <key>HexmeetHJT.version</key>\n     <value>"
+        content1 = "<environment>\n   <parameter>\n       <key>HexMeet.version</key>\n     <value>"
         content2 = "</value>\n    </parameter>\n</environment>"
 
         with open(file, "w+") as f:
