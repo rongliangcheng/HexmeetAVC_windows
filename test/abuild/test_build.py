@@ -33,6 +33,8 @@ def test_install_build():
     current_version = appVersion.getAppVersion()
     build_version = buildVersion.last_build_version(projectName)
 
+    CommonClass().createEnvironmentFile("allure-results/Environment.xml", current_version)
+
     if current_version.__contains__(str(build_version)):
         pass
     else:
