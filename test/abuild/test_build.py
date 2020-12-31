@@ -44,7 +44,7 @@ def test_install_build():
         sleep(60)
 
         matchObj = re.search(r'2\.6\.1\.([0-9]+)', build_file_url, re.I)
-        CommonClass().createEnvironmentFile("../allure-results/Environment.xml", matchObj.group())
+        CommonClass().createEnvironmentFile("allure-results/Environment.xml", matchObj.group())
         hjt_singleton.start_hexmeet()
         sleep(10)
         current_version = AppVersion().getAppVersion()
