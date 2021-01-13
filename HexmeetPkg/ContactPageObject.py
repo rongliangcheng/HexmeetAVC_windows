@@ -52,7 +52,7 @@ class Contact:
             self.contact_page.TextControl(searchDepth=11, Name="语音呼叫").Click()
             sleep(20)
             operate_in_meeting.audio_only_hangup()
-        self.return_from_person_info_page()
+        # self.return_from_person_info_page()
 
 
 
@@ -72,4 +72,4 @@ class Contact:
             self.contact_page.TextControl(searchDepth=11, Name="语音呼叫").Click()
             sleep(20)
             operate_in_meeting.audio_only_hangup()
-        self.return_from_person_info_page()
+        # self.return_from_person_info_page()
