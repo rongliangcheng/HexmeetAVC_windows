@@ -89,7 +89,7 @@ def test_prepare_all():
     sleep(5)
     __invite_others_and_join_the_meeting()
     JoinAMeeting().join_now_meeting_from_reserved_item_and_hangup()
-    reserve_meeting.return_from_reserve_meeting()
+    # reserve_meeting.return_from_reserve_meeting()
 
 
 @allure.feature("测试HEXMEET APP的设置界面")
