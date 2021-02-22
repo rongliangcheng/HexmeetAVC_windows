@@ -7,7 +7,8 @@ from time import sleep
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
 
-favorite_user="hexautotest5"
+favorite_user = "hexautotest5"
+
 
 class ReserveMeeting:
 
@@ -35,6 +36,7 @@ class ReserveMeeting:
         # auto.Click(x, y - 70)
         # high DPI
         auto.Click(x, y - 55)
+        self.click_upgrade_notice
 
     def reserve_meeting_from_panel(self):
         log.info("Reserve  meeting from panel")
@@ -161,6 +163,7 @@ class ReserveMeeting:
 
     def clear_reserved_meeting(self):
         log.info("Cleared un_deleted meetings")
+        self.click_upgrade_notice
         while self.reserve_meeting_page.CustomControl(searchDepth=12, Name="结束会议").Exists(1):
             self.reserve_meeting_page.CustomControl(searchDepth=12, Name="结束会议").Click()
             sleep(2)
@@ -176,3 +179,10 @@ class ReserveMeeting:
         self.reserve_meeting_page.ButtonControl(searchDepth=7, Name="< 返回").Click()
         sleep(1)
         self.reserve_meeting_page.ButtonControl(searchDepth=7, Name="< 返回").Click()
+
+    def click_upgrade_notice(self):
+        sleep(2)
+        try:
+            HexmeetWindowSingleton().getHexmeetWindow().GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").ButtonControl(searchDepth=8, Name="确定").Click()
+        except:
+            print()
