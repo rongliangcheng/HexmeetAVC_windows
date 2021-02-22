@@ -36,7 +36,8 @@ class ReserveMeeting:
         # auto.Click(x, y - 70)
         # high DPI
         auto.Click(x, y - 55)
-        self.click_upgrade_notice
+        sleep(4)
+        self.click_upgrade_notice()
 
     def reserve_meeting_from_panel(self):
         log.info("Reserve  meeting from panel")
@@ -182,6 +183,7 @@ class ReserveMeeting:
 
     def click_upgrade_notice(self):
         sleep(2)
+        log.info("click OK button")
         try:
             HexmeetWindowSingleton().getHexmeetWindow().GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").ButtonControl(searchDepth=8, Name="确定").Click()
         except:
