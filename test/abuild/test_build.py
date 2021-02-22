@@ -25,6 +25,7 @@ def teardown_module():
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
 @allure.feature("测试HEXMEET APP的设置界面")
 @allure.parent_suite("应用设置")
+@allure.suite("创建遍历带宽会议并入会")
 @allure.story("创建遍历带宽会议并入会")
 def test_install_build():
     appVersion = AppVersion()

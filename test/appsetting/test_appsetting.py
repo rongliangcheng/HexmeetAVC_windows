@@ -67,6 +67,7 @@ def __invite_self():
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
 @allure.feature("测试HEXMEET APP的设置界面")
 @allure.parent_suite("应用设置")
+@allure.suite("改变语言")
 @allure.story("改变语言")
 def test_change_language():
     app_setting.chang_language("English")
@@ -77,6 +78,7 @@ def test_change_language():
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
 @allure.feature("测试HEXMEET APP的设置界面")
 @allure.parent_suite("应用设置")
+@allure.suite("改变白板保持路径")
 @allure.story("改变白板保持路径")
 def test_change_screen_shot_path():
     app_setting.change_snapshot_path()
@@ -85,6 +87,7 @@ def test_change_screen_shot_path():
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
 @allure.feature("测试HEXMEET APP的设置界面")
 @allure.parent_suite("应用设置")
+@allure.suite("设置自动接听，并建会拉入")
 @allure.story("设置自动接听，并建会拉入")
 def test_change_auto_answer():
     app_setting.change_auto_answer()
@@ -95,6 +98,7 @@ def test_change_auto_answer():
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
 @allure.feature("测试HEXMEET APP的设置界面")
 @allure.parent_suite("应用设置")
+@allure.suite("设置入会后全屏模式")
 @allure.story("设置入会后全屏模式")
 def test_change_to_full_mode_meeting():
     app_setting.change_to_full_mode_meeting()
@@ -108,6 +112,7 @@ def test_change_to_full_mode_meeting():
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
 @allure.feature("测试HEXMEET APP的设置界面")
 @allure.parent_suite("应用设置")
+@allure.suite("创建遍历带宽会议并入会")
 @allure.story("创建遍历带宽会议并入会")
 def test_remove_reserved_meeting():
     reserve_meeting.go_to_meeting_page()

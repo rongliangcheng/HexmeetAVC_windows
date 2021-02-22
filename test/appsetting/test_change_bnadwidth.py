@@ -82,6 +82,7 @@ def __invite_others_and_join_the_meeting():
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
 @allure.feature("测试HEXMEET APP的设置界面")
 @allure.parent_suite("应用设置")
+@allure.suite("创建遍历带宽会议并入会")
 @allure.story("创建遍历带宽会议并入会")
 def test_prepare_all():
     sleep(5)
@@ -94,6 +95,7 @@ def test_prepare_all():
 
 @allure.feature("测试HEXMEET APP的设置界面")
 @allure.parent_suite("应用设置")
+@allure.suite("改变带宽并入会")
 @allure.story("改变带宽并入会")
 @pytest.mark.parametrize('bandwidth', bandwidth_list)
 def test_change_bandwidth(bandwidth):

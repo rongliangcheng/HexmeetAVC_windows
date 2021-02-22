@@ -24,6 +24,7 @@ def teardown_module():
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("通讯录")
 @allure.feature("测试HEXMEET APP的通讯录操作")
+@allure.suite("从组织架构中查找联系人")
 @allure.story("从组织架构中查找联系人")
 def test_video_call_from_organization():
     sleep(5)
@@ -33,6 +34,7 @@ def test_video_call_from_organization():
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("通讯录")
 @allure.feature("测试HEXMEET APP的通讯录操作")
+@allure.suite("从组织架构中查找联系人")
 @allure.story("从组织架构中查找联系人")
 def test_audio_call_from_organization():
     sleep(5)
