@@ -164,7 +164,7 @@ class ReserveMeeting:
 
     def clear_reserved_meeting(self):
         log.info("Cleared un_deleted meetings")
-        self.click_upgrade_notice
+        self.click_upgrade_notice()
         while self.reserve_meeting_page.CustomControl(searchDepth=12, Name="结束会议").Exists(1):
             self.reserve_meeting_page.CustomControl(searchDepth=12, Name="结束会议").Click()
             sleep(2)
@@ -182,7 +182,7 @@ class ReserveMeeting:
         self.reserve_meeting_page.ButtonControl(searchDepth=7, Name="< 返回").Click()
 
     def click_upgrade_notice(self):
-        sleep(2)
+        sleep(5)
         log.info("click OK button")
         try:
             HexmeetWindowSingleton().getHexmeetWindow().GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").ButtonControl(searchDepth=8, Name="确定").Click()

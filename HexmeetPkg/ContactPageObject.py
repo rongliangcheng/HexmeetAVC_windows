@@ -8,6 +8,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
 
+
 class Contact:
     def __init__(self):
         self.hexMeetWindow = HexmeetWindowSingleton().getHexmeetWindow()
@@ -20,20 +21,20 @@ class Contact:
     def __meeting_page_click(self):
         self.__contact_page_click()
         x, y = auto.GetCursorPos()
-        auto.Click(x, y-70)
+        auto.Click(x, y - 70)
 
-    def go_to_contact_organization_page_search(self,name):
+    def go_to_contact_organization_page_search(self, name):
         self.__meeting_page_click()
         self.__contact_page_click()
         self.contact_page.RadioButtonControl(searchDepth=11, Name="组织机构").Click()
         sleep(1)
-        self.contact_page.EditControl(searchDepth=11, Name="请输入名称").SendKeys(name+"{ENTER}")
+        self.contact_page.EditControl(searchDepth=11, Name="请输入名称").SendKeys(name + "{ENTER}")
 
     def return_from_person_info_page(self):
         log.info("Return from person info page")
         self.contact_page.TextControl(searchDepth=9, Name="用户详情").Click()
         x, y = auto.GetCursorPos()
-        auto.Click(x-302, y)
+        auto.Click(x - 302, y)
 
     def call_from_favorite(self, name, call_type=CallType.Video):
         log.info("call_from_favorite")
@@ -54,8 +55,6 @@ class Contact:
             operate_in_meeting.audio_only_hangup()
         # self.return_from_person_info_page()
 
-
-
     def call_from_organization(self, name, call_type=CallType.Video):
         log.info("call_from_organization")
         # 点击会议，再点击通讯录，返回通讯录的原始页面
@@ -73,3 +72,11 @@ class Contact:
             sleep(20)
             operate_in_meeting.audio_only_hangup()
         # self.return_from_person_info_page()
+
+    def click_upgrade_notice(self):
+        sleep(2)
+        log.info("click OK button")
+        try:
+            HexmeetWindowSingleton().getHexmeetWindow().GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").ButtonControl(searchDepth=8, Name="确定").Click()
+        except:
+            print()

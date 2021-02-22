@@ -89,18 +89,21 @@ class JoinAMeeting:
     def join_now_meeting_from_panel(self, calltype=CallType.Video, micstatus=MicStatus.UMUTE,
                                     camerastatus=CameraStatus.UMUTE):
         log.info("Make a call from the panel")
+        self.click_upgrade_notice()
         self.hexMeetWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").TextControl(searchDepth=8, Name="加入会议").Click()
         self.make_call(calltype, micstatus, camerastatus)
 
     def join_now_meeting_from_top_menu(self, calltype=CallType.Video, micstatus=MicStatus.UMUTE,
                                        camerastatus=CameraStatus.UMUTE):
         log.info("Make a call from top menu")
+        self.click_upgrade_notice()
         self.hexMeetWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar").ButtonControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar.m_pBtnJoinConf").Click()
         self.make_call(calltype, micstatus, camerastatus)
 
     def join_now_meeting_from_top_menu_hangup(self, calltype=CallType.Video, micstatus=MicStatus.UMUTE,
                                               camerastatus=CameraStatus.UMUTE):
         log.info("Make a call from top menu")
+        self.click_upgrade_notice()
         self.hexMeetWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar").ButtonControl(
             searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar.m_pBtnJoinConf").Click()
         self.make_call_and_drop(calltype, micstatus, camerastatus)
@@ -108,6 +111,7 @@ class JoinAMeeting:
     def join_now_meeting_from_reserved_item(self, calltype=CallType.Video, micstatus=MicStatus.UMUTE,
                                             camerastatus=CameraStatus.UMUTE):
         log.info("Make a call from reserved meeting itself")
+        self.click_upgrade_notice()
         self.hexMeetWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").CustomControl(
             searchDepth=12, Name="加入会议").Click()
         self.make_call(calltype, micstatus, camerastatus)
@@ -115,6 +119,7 @@ class JoinAMeeting:
     def join_now_meeting_from_reserved_item_and_hangup(self, calltype=CallType.Video, micstatus=MicStatus.UMUTE,
                                             camerastatus=CameraStatus.UMUTE):
         log.info("Make a call from reserved meeting itself")
+        self.click_upgrade_notice()
         self.hexMeetWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").CustomControl(
             searchDepth=12, Name="加入会议").Click()
         self.make_call_and_drop(calltype, micstatus, camerastatus)
@@ -124,3 +129,11 @@ class JoinAMeeting:
             searchDepth=1, ClassName="ev_app::views::CLayoutCoverDlg") \
             .GroupControl(searchDepth=2,
                           AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutCellCoverDlg.m_pWgtContent").Exists()
+
+    def click_upgrade_notice(self):
+        sleep(5)
+        log.info("click OK button")
+        try:
+            HexmeetWindowSingleton().getHexmeetWindow().GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").ButtonControl(searchDepth=8, Name="确定").Click()
+        except:
+            print()
