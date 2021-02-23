@@ -60,17 +60,17 @@ def test_login_with_wrong_server_address():
     user_login.login_fail_commit()
 
 
-@pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.parent_suite("登录")
-@allure.suite("尝试5遍被锁5分钟")
-@allure.feature("测试HEXMEET APP的登录界面的操作")
-@allure.story("尝试5遍被锁5分钟")
-def test_login_with_5_times_wrong_password():
-    for i in range(6):
-        __user_login("172.25.0.9", "hexautotest6", "12346")
-        sleep(1)
-        user_login.login_fail_commit()
-        sleep(10)
+# @pytest.mark.flaky(rerun=1, rerun_delay=2)
+# @allure.parent_suite("登录")
+# @allure.suite("尝试5遍被锁5分钟")
+# @allure.feature("测试HEXMEET APP的登录界面的操作")
+# @allure.story("尝试5遍被锁5分钟")
+# def test_login_with_5_times_wrong_password():
+#     for i in range(6):
+#         __user_login("172.25.0.9", "hexautotest6", "12346")
+#         sleep(1)
+#         user_login.login_fail_commit()
+#         sleep(10)
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
