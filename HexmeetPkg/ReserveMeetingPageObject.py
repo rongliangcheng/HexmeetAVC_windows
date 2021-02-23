@@ -140,6 +140,7 @@ class ReserveMeeting:
 
     def terminate_now_meeting(self):
         log.info("Terminate the meeting")
+        self.click_upgrade_notice()
         self.participants_page.CustomControl(searchDepth=10, Name="结束会议").Click()
         sleep(1)
         self.reserve_meeting_page.ButtonControl(searchDepth=7, Name="确认 ").Click()
@@ -187,4 +188,4 @@ class ReserveMeeting:
         try:
             HexmeetWindowSingleton().getHexmeetWindow().GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").ButtonControl(searchDepth=8, Name="确定").Click()
         except:
-            print()
+            print("")

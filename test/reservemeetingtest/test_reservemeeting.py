@@ -197,8 +197,8 @@ def test_create_now_password_and_join():
     # reserve_meeting.return_from_reserve_meeting()
     sleep(5)
     join_a_meeting.join_now_meeting_from_reserved_item_and_hangup(CallType.Video, MicStatus.MUTE, CameraStatus.UMUTE)
-    sleep(5)
-    ReserveMeeting().terminate_now_meeting()
+    # sleep(5)
+    # ReserveMeeting().terminate_now_meeting()
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
@@ -229,15 +229,15 @@ def test_parametrize_call_mode_matrix(callmode, mic_status, camera_status):
     join_a_meeting.join_now_meeting_from_reserved_item_and_hangup(callmode, mic_status, camera_status)
 
 
-@pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.parent_suite("预约会议")
-@allure.suite("音视频，麦克风，摄像头呼叫组合会议删除")
-@allure.feature("测试HEXMEET APP的设置预约会议操作")
-@allure.story("音视频，麦克风，摄像头呼叫组合会议删除")
-def test_terminate_reserved_now_call():
-    sleep(5)
-    reserve_meeting.terminate_now_meeting()
-
+# @pytest.mark.flaky(rerun=1, rerun_delay=2)
+# @allure.parent_suite("预约会议")
+# @allure.suite("音视频，麦克风，摄像头呼叫组合会议删除")
+# @allure.feature("测试HEXMEET APP的设置预约会议操作")
+# @allure.story("音视频，麦克风，摄像头呼叫组合会议删除")
+# def test_terminate_reserved_now_call():
+#     sleep(5)
+#     reserve_meeting.terminate_now_meeting()
+#
 
 
 if __name__ == '__main__':
