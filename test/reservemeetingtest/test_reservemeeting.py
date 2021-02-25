@@ -209,12 +209,12 @@ def test_create_now_password_and_join():
 def test_create_now_meeting():
     reserve_meeting = ReserveMeeting()
     reserve_meeting.clear_reserved_meeting()
-    sleep(2)
+    sleep(5)
     reserve_meeting.reserve_meeting_from_panel()
     sleep(1)
     reserve_meeting.choose_now()
     reserve_meeting.reserve_confirm()
-    sleep(3)
+    sleep(15)
     reserve_meeting.return_from_reserve_meeting()
     sleep(1)
 
