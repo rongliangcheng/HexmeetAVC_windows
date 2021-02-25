@@ -151,7 +151,7 @@ class ReserveMeeting:
         self.reserve_meeting_page.TextControl(searchDepth=8, Name="立即会议").Click()
         sleep(3)
         self.reserve_confirm()
-        sleep(2)
+        sleep(15)
         self.return_from_reserve_meeting()
         JoinAMeeting().join_now_meeting_from_reserved_item()
 
