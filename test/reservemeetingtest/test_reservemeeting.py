@@ -191,7 +191,7 @@ def test_create_now_password_and_join():
     reserve_meeting.choose_participants(remote_user)
     sleep(1)
     reserve_meeting.reserve_confirm()
-    sleep(1)
+    sleep(15)
     join_a_meeting.join_now_meeting_from_reserved_item_and_hangup()
     # sleep(5)
     # reserve_meeting.return_from_reserve_meeting()
