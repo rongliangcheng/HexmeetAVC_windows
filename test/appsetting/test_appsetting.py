@@ -60,7 +60,7 @@ def __invite_self():
     reserve_meeting.choose_now()
     reserve_meeting.choose_participants(login_user)
     reserve_meeting.reserve_confirm()
-    sleep(20)
+    sleep(30)
     operate_meeting.terminate_call()
 
 
