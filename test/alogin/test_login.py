@@ -79,7 +79,7 @@ def test_login_with_wrong_server_address():
 @allure.feature("测试HEXMEET APP的登录界面的操作")
 @allure.story("正常登录成功")
 def test_login_with_normal():
-    sleep(300)
+    # sleep(300)
     __user_login("172.25.0.9", "hexautotest6", "123456")
 
 
