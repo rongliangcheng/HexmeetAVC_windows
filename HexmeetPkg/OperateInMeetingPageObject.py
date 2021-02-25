@@ -18,7 +18,9 @@ class OperateInMeeting:
     def click_meetingLabel(self):
         log.info("Click the meeting number to call the toolbar")
         x, y = auto.GetCursorPos()
+        auto.SetCursorPos(x+100, y+100)
         self.meetingLabel.Click()
+        # auto.MoveTo(x, y, 1, 0)
         auto.SetCursorPos(x, y)
 
     def show_media_statistics(self):
