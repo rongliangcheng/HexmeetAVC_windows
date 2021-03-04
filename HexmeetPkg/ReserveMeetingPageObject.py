@@ -166,9 +166,13 @@ class ReserveMeeting:
     def clear_reserved_meeting(self):
         log.info("Cleared un_deleted meetings")
         self.click_upgrade_notice()
-        while self.reserve_meeting_page.CustomControl(searchDepth=12, Name="结束会议").Exists(1):
-            self.reserve_meeting_page.CustomControl(searchDepth=12, Name="结束会议").Click()
+        while self.reserve_meeting_page.CustomControl(searchDepth=12, Name="会议详情").Exists(1):
+            self.reserve_meeting_page.CustomControl(searchDepth=12, Name="会议详情").Click()
             sleep(2)
+            if self.reserve_meeting_page.TextControl(searchDepth=11,Name="结束会议").Exists(1):
+                self.reserve_meeting_page.TextControl(searchDepth=11, Name="结束会议").Click()
+            if self.reserve_meeting_page.TextControl(searchDepth=11, Name="删除会议").Exists(1):
+                self.reserve_meeting_page.TextControl(searchDepth=11, Name="删除会议").Click()
             self.reserve_meeting_page.ButtonControl(searchDepth=8, Name="确认 ").Click()
             sleep(3)
 

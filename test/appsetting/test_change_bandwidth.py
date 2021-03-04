@@ -105,6 +105,14 @@ def test_change_bandwidth(bandwidth):
     __join_and_quit_meeting()
     sleep(8)
 
+@allure.feature("测试HEXMEET APP的设置界面")
+@allure.parent_suite("应用设置")
+@allure.suite("清除正在进行的会议")
+@allure.story("清除正在进行的会议")
+def test_clear_meetings():
+    reserve_meeting.go_to_meeting_page()
+    sleep(5)
+    reserve_meeting.clear_reserved_meeting()
 
 # @pytest.mark.flaky(rerun=1, reruns_delay=2)
 # @allure.feature("测试HEXMEET APP的设置界面")
@@ -116,4 +124,4 @@ def test_change_bandwidth(bandwidth):
 
 
 if __name__ == '__main__':
-    pytest.main(["-s", "test_appsetting.py", "--alluredir=reports"])
+    pytest.main(["-s", "test_change_bandwidth.py", "--alluredir=reports"])
