@@ -122,8 +122,8 @@ class ReserveMeeting:
     def delete_reserve_meeting(self):
         log.info("Delete the reserved meeting")
         self.reserve_meeting_page.CustomControl(searchDepth=12, Name="会议详情").Click()
-        self.reserve_meeting_page.TextControl(searchDepth=11, Name="删除会议").Click()
-        self.reserve_meeting_page.ButtonControl(searchDepth=8, Name="确认 ").Click()
+        self.reserve_meeting_page.TextControl(searchDepth=10, Name="删除会议").Click()
+        self.reserve_meeting_page.ButtonControl(searchDepth=7, Name="确认 ").Click()
         sleep(2)
 
     def edit_reserve_meeting(self):
