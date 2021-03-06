@@ -40,7 +40,7 @@ class Contact:
         log.info("call_from_favorite")
         self.__meeting_page_click()
         self.__contact_page_click()
-        self.contact_page.TextControl(searchDepth=13, Name=name).Click()
+        self.contact_page.TextControl(searchDepth=13, Name=name+" ").Click()
         sleep(1)
         operate_in_meeting = OperateInMeeting()
         if call_type == CallType.Video:
